@@ -8,7 +8,7 @@ public class Dealer extends Person {
 
     @Override
     public void printTotal() {
-        System.out.print("His");
+        System.out.print("His ");
         super.printTotal();
     }
 

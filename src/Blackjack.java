@@ -38,6 +38,7 @@ public class Blackjack {
                     player.printTotal();
                     if (player.getTotal() > 21) {
                         System.out.println("You went bust");
+                        newLine();
                         System.out.println("YOU LOSE!");
                         return;
                     }
@@ -66,6 +67,7 @@ public class Blackjack {
                 newLine();
                 if(dealer.getTotal() > 21) {
                     System.out.println("Dealer went bust");
+                    newLine();
                     System.out.println("YOU WIN!");
                     return;
                 }
