@@ -3,7 +3,6 @@ public class Dealer extends Person {
     Dealer() {
         super();
         this.isPlaying = false;
-        this.hasHidden = true;
     }
 
     @Override

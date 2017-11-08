@@ -4,7 +4,6 @@ public class Person {
     private ArrayList<Card> hand = new ArrayList<>();
     private int total; // total value of all cards in the hand
     boolean isPlaying;
-    boolean hasHidden; // if person has a hidden card
 
     Person() {
         Card c1 = new Card();
