@@ -2,7 +2,7 @@ public class Player extends Person {
 
     Player() {
         super();
-        this.isPlaying = true;
+        this.playing = true;
     }
 
     @Override

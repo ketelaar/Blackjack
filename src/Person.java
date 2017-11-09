@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Person {
     private ArrayList<Card> hand = new ArrayList<>();
     private int total; // total value of all cards in the hand
-    boolean isPlaying;
+    boolean playing;
 
     Person() {
         Card c1 = new Card();
@@ -14,11 +14,11 @@ public class Person {
     }
 
     boolean isPlaying() {
-        return isPlaying;
+        return playing;
     }
 
     void setPlaying() {
-        isPlaying = true;
+        playing = true;
     }
 
     ArrayList<Card> getHand() {
@@ -49,6 +49,6 @@ public class Person {
     }
 
     void stay() {
-        this.isPlaying = false;
+        this.playing = false;
     }
 }
