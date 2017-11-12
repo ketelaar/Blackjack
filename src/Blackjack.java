@@ -34,6 +34,7 @@ public class Blackjack {
         while (player.isPlaying()) {
             System.out.println("Would you like to \"hit\" or \"stay\"?");
             String nextAction = sc.next();
+            nextAction = nextAction.toLowerCase(); // capitalization is made trivial for input
             switch (nextAction) {
                 case "hit":
                     player.hit();
