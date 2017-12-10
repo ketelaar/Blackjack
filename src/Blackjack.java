@@ -19,7 +19,8 @@ public class Blackjack {
 
         Card firstCard = player.getHand().get(0);
         Card secondCard = player.getHand().get(1);
-        System.out.println("You get a " + firstCard.getValue() + " and a " + secondCard.getValue());
+        System.out.println("You get a " + firstCard.getValue() + " of " + firstCard.getSuit()
+                + " and a " + secondCard.getValue() + " of " + secondCard.getSuit());
         player.printTotal();
         newLine();
 

@@ -45,7 +45,7 @@ public class Person {
     public void hit() {
         Card newCard = new Card();
         hand.add(newCard);
-        System.out.println("drew a " + newCard.getValue());
+        System.out.println("drew a " + newCard.getValue() + " of " + newCard.getSuit());
     }
 
     void stay() {
