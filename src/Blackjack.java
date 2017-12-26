@@ -59,7 +59,7 @@ public class Blackjack {
         // Dealer's turn to play
         dealer.setPlaying();
         System.out.println("Okay, dealer's turn.");
-        System.out.println("His hidden card was a " + secondCard.getValue());
+        System.out.println("His hidden card was a " + secondCard.getValue() + " of " + secondCard.getSuit());
         System.out.println("His total was " + dealer.getTotal());
         newLine();
 
