@@ -26,7 +26,7 @@ class Card {
         }
     }
 
-    public String getSuit() {
+    String getSuit() {
         return suit;
     }
 

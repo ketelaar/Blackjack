@@ -42,10 +42,12 @@ public class Person {
         System.out.println("total is " + getTotal());
     }
 
-    public void hit() {
+    void hit(boolean SUPPRESS) {
         Card newCard = new Card();
         hand.add(newCard);
-        System.out.println("drew a " + newCard.getValue() + " of " + newCard.getSuit());
+        if (!SUPPRESS) {
+            System.out.println("drew a " + newCard.getValue() + " of " + newCard.getSuit());
+        }
     }
 
     void stay() {

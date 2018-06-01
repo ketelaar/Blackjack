@@ -9,7 +9,7 @@ public class Blackjack {
     }
 
     private void newLine() {
-        System.out.println("");
+        System.out.println();
     }
 
     private void run() {
@@ -38,7 +38,7 @@ public class Blackjack {
             nextAction = nextAction.toLowerCase(); // capitalization is made trivial for input
             switch (nextAction) {
                 case "hit":
-                    player.hit();
+                    player.hit(false);
                     player.printTotal();
                     if (player.getTotal() > 21) {
                         System.out.println("You went bust");
@@ -66,7 +66,7 @@ public class Blackjack {
         while (dealer.isPlaying()) {
             if (dealer.getTotal() < 17) {
                 System.out.println("Dealer chooses to hit");
-                dealer.hit();
+                dealer.hit(false);
                 dealer.printTotal();
                 newLine();
                 if(dealer.getTotal() > 21) {
