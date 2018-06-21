@@ -14,7 +14,7 @@ public class Dealer extends Person {
     @Override
     public void hit(boolean SUPPRESS) {
         System.out.print("Dealer ");
-        super.hit(false);
+        super.hit(SUPPRESS);
     }
 
 }

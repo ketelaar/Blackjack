@@ -14,6 +14,6 @@ public class Player extends Person {
     @Override
     public void hit(boolean SUPPRESS) {
         System.out.print("You ");
-        super.hit(false);
+        super.hit(SUPPRESS);
     }
 }

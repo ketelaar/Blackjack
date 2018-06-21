@@ -4,10 +4,10 @@ import java.util.Random;
 import static org.junit.jupiter.api.Assertions.*;
 
 
-class testPerson {
+class testPlayer {
     @Test
     void testTotal() {
-        Person p = new Person();
+        Player p = new Player();
         Card c1 = p.getHand().get(0);
         Card c2 = p.getHand().get(1);
         assertEquals(p.getTotal(), c1.getValue() + c2.getValue());
@@ -15,21 +15,21 @@ class testPerson {
 
     @Test
     void testStay() {
-        Person p = new Person();
+        Player p = new Player();
         p.stay();
         assertFalse(p.isPlaying());
     }
 
     @Test
     void testSetPlaying() {
-        Person p = new Person();
+        Player p = new Player();
         p.setPlaying();
         assertTrue(p.isPlaying());
     }
 
     @Test
     void testHit() {
-        Person p = new Person();
+        Player p = new Player();
         final int SEED = 42;
         final int LIMIT = 1000000;
         Random random = new Random(SEED);
@@ -39,6 +39,4 @@ class testPerson {
         }
         assertEquals(p.getHand().size(), randInt + 2);
     }
-
-
 }
