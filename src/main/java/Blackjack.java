@@ -2,10 +2,27 @@ import java.util.Scanner;
 
 public class Blackjack {
 
-    private Scanner sc = new Scanner(System.in);
+    private static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-        (new Blackjack()).run();
+        Blackjack b = new Blackjack();
+        b.run();
+        while (true){
+            System.out.println("Play Again? (Y/N)");
+            String play = sc.next().toLowerCase();
+            switch (play) {
+                case "y":
+                    b.run();
+                    break;
+                case "n":
+                    System.out.println("Terminating Programme");
+                    return;
+                default:
+                    System.out.println("Invalid input, try again");
+                    break;
+            }
+        }
+
     }
 
     private void newLine() {
