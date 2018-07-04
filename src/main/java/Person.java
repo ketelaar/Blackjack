@@ -46,7 +46,7 @@ public class Person {
         Card newCard = new Card();
         hand.add(newCard);
         if (!SUPPRESS) {
-            System.out.println("drew a " + newCard.getValue() + " of " + newCard.getSuit());
+            System.out.println("drew " + newCard.printCardValue());
         }
     }
 

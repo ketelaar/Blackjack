@@ -36,15 +36,14 @@ public class Blackjack {
 
         Card firstCard = player.getHand().get(0);
         Card secondCard = player.getHand().get(1);
-        System.out.println("You get a " + firstCard.getValue() + " of " + firstCard.getSuit()
-                + " and a " + secondCard.getValue() + " of " + secondCard.getSuit());
+        System.out.println("You get" + firstCard.printCardValue() + " and " + secondCard.printCardValue());
         player.printTotal();
         newLine();
 
         firstCard = dealer.getHand().get(0);
         secondCard = dealer.getHand().get(1);
 
-        System.out.println("The dealer has a " + firstCard.getValue() + " showing, and a hidden card.");
+        System.out.println("The dealer has " + firstCard.printCardValue() + " showing, and a hidden card.");
         System.out.println("His total is hidden, too.");
         newLine();
 
@@ -76,7 +75,7 @@ public class Blackjack {
         // Dealer's turn to play
         dealer.setPlaying();
         System.out.println("Okay, dealer's turn.");
-        System.out.println("His hidden card was a " + secondCard.getValue() + " of " + secondCard.getSuit());
+        System.out.println("His hidden card was " + secondCard.printCardValue());
         System.out.println("His total was " + dealer.getTotal());
         newLine();
 

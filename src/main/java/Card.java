@@ -3,11 +3,15 @@ import java.util.Random;
 class Card {
     private int value;
     private String suit;
+    private Boolean ace = false;
 
     Card() {
         Random random = new Random();
-        while (value == 0){
+        while (this.value == 0){
             this.value = random.nextInt(12);
+        }
+        if (this.value == 11) {
+            this.ace = true;
         }
         int suitNumber = random.nextInt(3);
         switch (suitNumber) {
@@ -26,12 +30,24 @@ class Card {
         }
     }
 
-    String getSuit() {
-        return suit;
+    String printCardValue() {
+        if (this.ace) {
+            return ("an Ace of " + this.suit);
+        } else {
+            return ("a " + this.value + " of " + this.suit);
+        }
     }
 
     int getValue() {
         return this.value;
+    }
+
+    String getSuit() {
+        return this.suit;
+    }
+
+    Boolean isAce() {
+        return this.ace;
     }
 
 
