@@ -39,4 +39,10 @@ class testPlayer {
         }
         assertEquals(p.getHand().size(), randInt + 2);
     }
+
+    @Test
+    void testStandardHand() {
+        Player p = new Player();
+        assertEquals(2, p.getHand().size());
+    }
 }

@@ -25,4 +25,10 @@ class testCard {
             fail();
         }
     }
+
+    @Test
+    void testValue() {
+        Card c = new Card();
+        assertTrue(c.getValue() < 12);
+    }
 }

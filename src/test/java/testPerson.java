@@ -32,12 +32,24 @@ class testPerson {
         Person p = new Person();
         final int SEED = 42;
         final int LIMIT = 1000000;
+        int sum = 0;
         Random random = new Random(SEED);
         int randInt = random.nextInt(LIMIT);
         for (int i = 0; i < randInt; i++) {
             p.hit(true);
         }
         assertEquals(p.getHand().size(), randInt + 2);
+
+        for (Card c : p.getHand()) {
+            sum += c.getValue();
+        }
+        assertEquals(p.getTotal(), sum);
+    }
+
+    @Test
+    void testStandardHand() {
+        Person p = new Person();
+        assertEquals(2, p.getHand().size());
     }
 
 

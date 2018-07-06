@@ -39,4 +39,10 @@ class testDealer {
         }
         assertEquals(p.getHand().size(), randInt + 2);
     }
+
+    @Test
+    void testStandardHand() {
+        Dealer p = new Dealer();
+        assertEquals(2, p.getHand().size());
+    }
 }
