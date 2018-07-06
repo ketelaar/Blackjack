@@ -13,7 +13,7 @@ class Card {
         if (this.value == 11) {
             this.ace = true;
         }
-        int suitNumber = random.nextInt(3);
+        int suitNumber = random.nextInt(4);
         switch (suitNumber) {
             case 0:
                 this.suit = "Diamonds";

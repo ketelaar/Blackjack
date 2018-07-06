@@ -31,4 +31,14 @@ class testCard {
         Card c = new Card();
         assertTrue(c.getValue() < 12);
     }
+
+    @Test
+    void testprintCardValue() {
+        Card c = new Card();
+        if (c.isAce()) {
+            assertEquals(c.printCardValue(), "an Ace of " + c.getSuit());
+        } else {
+            assertEquals(c.printCardValue(), "a " + c.getValue() + " of " + c.getSuit());
+        }
+    }
 }
