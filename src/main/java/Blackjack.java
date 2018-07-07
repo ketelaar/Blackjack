@@ -22,7 +22,6 @@ public class Blackjack {
                     break;
             }
         }
-
     }
 
     private void newLine() {
